@@ -1,5 +1,14 @@
 # mxProject
+
 Simple Angular + Nest Application
+
+# INSTRUCTIONS
+
+ - For each one, run npm i to install dependencies
+ - Running FrontEnd - ng serve
+ - Running BackEnd - npm run start:dev
+ - Using MySQL Database
+
 # GOALS
 
   - Create a backend HTTP restful application using JAVA or Nest JS framework - DOCS https://docs.nestjs.com/ 
