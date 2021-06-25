@@ -14,6 +14,31 @@
       <ng2-smart-table [source]="dataSource" [settings]="settings" (edit)="editOrder($event)"
         (delete)="deleteOrder($event)" (userRowSelect)="showProducts($event)">
       </ng2-smart-table>
+      <div *ngIf="products.length > 0" class="modalBlazkowicz">
+        <div class="modal fade" id="productsModal" tabindex="-1" role="dialog" aria-labelledby="productsModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <div class="modalHeader">
+                  <h4>Order Products</h4>
+                  <button (click)="products = []">
+                    <strong style="color: #5d534a; margin: 10px;">X</strong>
+                  </button>
+                </div>
+              </div>
+              <br />
+              <div class="modal-body">
+                <div class="modalBody">
+                  <div *ngFor="let product of products" style="color: #5d534a; width: 100%;">
+                    > {{product.name}}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <hr>
     <div class="footer">
@@ -39,3 +64,4 @@
       </div>
     </div>
   </div>
+</div>

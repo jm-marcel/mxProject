@@ -55,6 +55,41 @@
   overflow-x: auto;
 }
 
+.modalBlazkowicz {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  overflow-x: auto;
+  border-color: #5d534a;
+  background-color: #f9f9f9;
+}
+
+.modalHeader {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.modalBody {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
 .bar {
   color: #5d534a;
   font-size: large;
@@ -96,6 +131,11 @@ h2 {
 
 h3 {
   color: #a9a9a9;
+  margin: 0px;
+}
+
+h4 {
+  color: #5d534a;
   margin: 0px;
 }
 
