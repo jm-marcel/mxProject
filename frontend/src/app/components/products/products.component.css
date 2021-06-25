@@ -1,0 +1,187 @@
+.general {
+  background-color: #5d534a;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.center {
+  border-radius: 15px;
+  background-color: #f9f9f9;
+  height: 85%;
+  width: 75%;
+}
+
+.header {
+  position: relative;
+  height: 15%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.body {
+  position: relative;
+  height: 65%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.footer {
+  position: relative;
+  height: 15%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.bar {
+  color: #5d534a;
+  font-size: large;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.message {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.space {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+h2 {
+  color: #5d534a;
+  margin: 0px;
+}
+
+h3 {
+  color: #a9a9a9;
+  margin: 0px;
+}
+
+hr {
+  color: #5d534a;
+}
+
+button {
+  border: none;
+  padding: 0px;
+  background: none;
+  cursor: pointer;
+}
+
+form {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  outline: none;
+  border-top: none;
+  border-bottom-style: ridge;
+  border-bottom-color: #a9a9a9;
+  border-bottom-width: 1px;
+  border-right: none;
+  border-left: none;
+  padding: 0px;
+  background: none;
+  color: #7c7c7c;
+}
+
+label {
+  color: #5d534a;
+  font-size: larger;
+  font-weight: 500;
+}
+
+span {
+  color: red;
+  font-weight: 200;
+}
+
+img {
+  max-height: 20px;
+  max-width: 20px;
+}
+
+:host /deep/ ng2-smart-table a {
+  color: #5d534a;
+}
+
+:host /deep/ ng2-smart-table-pager {
+  justify-content: center;
+}
+
+:host /deep/ ng2-smart-table img {
+  max-height: 20px;
+  max-width: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+:host /deep/ ng2-smart-table input {
+  outline: none;
+  border-top: none;
+  border-bottom-style: ridge;
+  border-bottom-color: #a9a9a9;
+  border-bottom-width: 1px;
+  border-right: none;
+  border-left: none;
+  padding: 0px;
+  background: none;
+  color: #7c7c7c;
+}
+
+:host /deep/ ng2-smart-table thead > tr > th {
+  font-weight: 400;
+  color: #5d534a;
+}
+
+:host /deep/ ng2-smart-table thead > tr > td {
+  font-weight: 400;
+  color: #5d534a;
+}

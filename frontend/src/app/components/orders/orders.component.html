@@ -1,0 +1,41 @@
+<div class="general">
+  <div class="center">
+    <div class="header">
+      <button (click)="goToProducts()">
+        <h3>Products</h3>
+      </button>
+      <div class="bar">
+        /
+      </div>
+      <h2>Orders</h2>
+    </div>
+    <hr>
+    <div class="body">
+      <ng2-smart-table [source]="dataSource" [settings]="settings" (edit)="editOrder($event)"
+        (delete)="deleteOrder($event)" (userRowSelect)="showProducts($event)">
+      </ng2-smart-table>
+    </div>
+    <hr>
+    <div class="footer">
+      <form #form="ngForm" style="width: 100%;">
+        <div *ngIf="!isEditing" class="item">
+          <button (click)="createOrder()">
+            <img src="../../../assets/images/add.png">
+          </button>
+        </div>
+        <div *ngIf="isEditing" class="item">
+          <button (click)="updateOrder()">
+            <img src="../../../assets/images/edit.png">
+          </button>
+        </div>
+        <div class="item">
+          <ng-select #ngSelect [items]="allProducts" placeholder="Select a Product" appendTo="body" bindValue="id"
+            bindLabel="name" multiple="true" (change)="addProducts($event)">
+          </ng-select>
+        </div>
+      </form>
+      <div *ngIf="noProducts" class="message" style="width: 100%;">
+        <span>Please, select at least one product!</span>
+      </div>
+    </div>
+  </div>

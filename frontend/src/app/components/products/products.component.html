@@ -1,0 +1,49 @@
+<div class="general">
+  <div class="center">
+    <div class="header">
+      <h2>Products</h2>
+      <div class="bar">
+        /
+      </div>
+      <button (click)="goToOrders()">
+        <h3>Orders</h3>
+      </button>
+    </div>
+    <hr>
+    <div class="body">
+      <ng2-smart-table [source]="dataSource" [settings]="settings" (edit)="editProduct($event)"
+        (delete)="deleteProduct($event)">
+      </ng2-smart-table>
+    </div>
+    <hr>
+    <div class="footer">
+      <form #form="ngForm" style="width: 100%;">
+        <div *ngIf="!isEditing" class="item">
+          <button (click)="createProduct(form)">
+            <img src="../../../assets/images/add.png">
+          </button>
+        </div>
+        <div *ngIf="isEditing" class="item">
+          <button (click)="updateProduct(form)">
+            <img src="../../../assets/images/edit.png">
+          </button>
+        </div>
+        <div class="item">
+          <input placeholder="Name" type="text" name="name" [(ngModel)]="product.name" required>
+        </div>
+        <div class="item">
+          <input placeholder="Price" type="number" name="price" [(ngModel)]="product.price" required>
+        </div>
+        <div class="item">
+          <input placeholder="Category" type="text" name="category" [(ngModel)]="product.category" required>
+        </div>
+      </form>
+      <div *ngIf="missingData && !noData" class="message" style="width: 100%;">
+        <span>There are missing field values!</span>
+      </div>
+      <div *ngIf="!missingData && noData" class="message" style="width: 100%;">
+        <span>Please, insert the values in the fields above!</span>
+      </div>
+    </div>
+  </div>
+</div>
