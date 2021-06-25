@@ -84,6 +84,7 @@ export class OrdersComponent implements OnInit {
   }
 
   async editOrder(event: any) {
+    this.ngSelect.handleClearClick();
     this.isEditing = true;
     this.order = event.data;
     const order = await this.apiService.readOrder(event.data.id).toPromise();
